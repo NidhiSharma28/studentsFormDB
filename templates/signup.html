@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/signup" method = "POST" novalidate>
+    {{form.csrf_token}}
+    <center>
+        <table>
+            <th>
+                <tr><b><h2>Sign Up to the student portal</h2></b></tr>
+            </th>
+        <tr>
+            <td>{{form.firstname.label}}</td>
+            <td>{{form.firstname(size=20)}}</td>
+            <td>
+                {% for err in form.firstname.errors %}
+                <span style="color:red">{{err}}</span>
+                {%endfor%}
+            </td>
+        </tr>
+        <tr>
+            <td>{{form.lastname.label}}</td>
+            <td>{{form.lastname(size=20)}}</td>
+            <td>
+                {%for err in form.lastname.errors%}
+                <span style="color:red">{{err}}</span>
+                {%endfor%}
+            </td>
+        </tr>
+        <tr>
+            <td>{{form.email.label}}</td>
+            <td>{{form.email(size=20)}}</td>
+            <td>
+                {%for err in form.email.errors%}
+                <span style="color:red">{{err}}</span>
+                {%endfor%}
+            </td>
+        </tr>
+        <tr>
+            <td>{{form.password.label}}</td>
+            <td>{{form.password(size=20)}}</td>
+            <td>
+                {%for err in form.password.errors%}
+                <span style="color:red">{{err}}</span>
+                {%endfor%}
+            </td>
+        </tr>
+         </table>
+        <br>
+       <input type="submit" value = SignUp>
+    </center>
+
+
+
+</form>
+</body>
+</html>

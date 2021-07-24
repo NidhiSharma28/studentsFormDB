@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<form action="/edit/{{stu.id}}" method = "POST">
+    <center>
+       <table>
+            <th>
+                <tr><b><h2>Update Form</h2></b></tr>
+            </th>
+        <tr>
+            <td><label>FirstName</label></td>
+            <td><input type="text" value = {{stu.firstname}} name = "firstname"></td>
+        </tr>
+        <tr>
+            <td><label>LastName</label></td>
+            <td><input type="text" value = {{stu.lastname}} name = "lastname"></td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td><input type="text" value = {{stu.email}} name = "email"></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="text" value = {{stu.password}} name="password"></td>
+        </tr>
+         </table>
+        <br>
+       <input type="submit" value = Update>
+    </center>
+</form>
+</body>
+</html>
